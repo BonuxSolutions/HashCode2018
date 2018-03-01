@@ -9,14 +9,22 @@ case class Metadata(
   T: Int
 )
 
-case class Intersection(
+case class Coord(
   x: Int,
   y: Int
 )
 
+case class Car(
+  id: Int,
+  rides: List[Ride] = Nil,
+  coord: Coord = Coord(0, 0),
+  timeSpent: Int = 0
+)
+
 case class Ride(
-  start: Intersection,
-  end: Intersection,
+  start: Coord,
+  end: Coord,
   s: Int,
-  f: Int
+  f: Int,
+  taken: Boolean = false
 )

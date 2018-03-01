@@ -15,8 +15,8 @@ class WorkWithFile(fileName: String) {
     val rides = rest.map { r =>
       val Array(a, b, x, y, s, f) = r.split(" ").map(_.toInt)
       Ride(
-        start = Intersection(a, b),
-        end = Intersection(x, y),
+        start = Coord(a, b),
+        end = Coord(x, y),
         s = s,
         f = f
       )
